@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   description: "Transform your outdoor space with SplitRock's professional landscaping and outdoor construction services in New York. Specializing in lawn care, patios, decks, pergolas, and complete outdoor living spaces. Licensed & insured with 10+ years experience.",
   keywords: ["landscaping", "outdoor construction", "lawn care", "patios", "decks", "pergolas", "New York", "Albany", "outdoor living"],
   authors: [{ name: "SplitRock Landscaping" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -27,6 +26,11 @@ export const metadata: Metadata = {
     title: "SplitRock - Professional Landscaping & Outdoor Construction",
     description: "Transform your outdoor space with professional landscaping services in New York.",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

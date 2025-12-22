@@ -53,7 +53,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-green-50/30"></div>
 
-        <div className="relative z-10 text-center px-6 md:px-8 max-w-6xl mx-auto">
+        <div className="relative z-10 text-center px-8 md:px-8 max-w-6xl mx-auto">
           <div>
             <h1 className="mt-16 md:mt-32 text-2xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-2 md:mb-6 tracking-tight">
               SplitRock
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="h-12 md:h-20"></div>
 
           {/* Service Cards in Hero */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 max-w-2xl md:max-w-none mx-auto">
             {/* Landscaping Service */}
             <div
               onClick={() => scrollToSection('landscaping')}
@@ -111,19 +111,19 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="p-10 relative">
-                <div className="flex items-center gap-3 mb-4">
+              <div className="p-6 md:p-10 relative">
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
                   <div className="w-2 h-2"></div>
-                  <h2 className="text-2xl md:text-3xl font-black text-gray-900 group-hover:text-emerald-600 transition-all duration-300 tracking-tight">
+                  <h2 className="text-xl md:text-3xl font-black text-gray-900 group-hover:text-emerald-600 transition-all duration-300 tracking-tight">
                     LANDSCAPING
                   </h2>
                 </div>
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed font-medium group-hover:text-gray-700 transition-colors">
+                <p className="text-gray-600 text-sm md:text-lg leading-relaxed font-medium group-hover:text-gray-700 transition-colors">
                   Transform your outdoor space with cutting-edge design
                 </p>
-                <div className="mt-6 flex items-center justify-center text-emerald-600 group-hover:text-emerald-700 transition-colors">
-                  <span className="text-sm font-bold tracking-wider uppercase">Explore Services</span>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mt-4 md:mt-6 flex items-center justify-center text-emerald-600 group-hover:text-emerald-700 transition-colors">
+                  <span className="text-xs md:text-sm font-bold tracking-wider uppercase">Explore Services</span>
+                  <svg className="w-3 h-3 md:w-4 md:h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
@@ -143,19 +143,19 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="p-10 relative">
-                <div className="flex items-center gap-3 mb-4">
+              <div className="p-6 md:p-10 relative">
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
                   <div className="w-2 h-2"></div>
-                  <h2 className="text-2xl md:text-3xl font-black text-gray-900 group-hover:text-amber-600 transition-all duration-300 tracking-tight">
+                  <h2 className="text-xl md:text-3xl font-black text-gray-900 group-hover:text-amber-600 transition-all duration-300 tracking-tight">
                     CONSTRUCTION
                   </h2>
                 </div>
-                <p className="text-gray-600 text-base md:text-lg leading-relaxed font-medium group-hover:text-gray-700 transition-colors">
+                <p className="text-gray-600 text-sm md:text-lg leading-relaxed font-medium group-hover:text-gray-700 transition-colors">
                   Premium outdoor construction that elevates your property
                 </p>
-                <div className="mt-6 flex items-center justify-center text-amber-600 group-hover:text-amber-700 transition-colors">
-                  <span className="text-sm font-bold tracking-wider uppercase">Explore Services</span>
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mt-4 md:mt-6 flex items-center justify-center text-amber-600 group-hover:text-amber-700 transition-colors">
+                  <span className="text-xs md:text-sm font-bold tracking-wider uppercase">Explore Services</span>
+                  <svg className="w-3 h-3 md:w-4 md:h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
