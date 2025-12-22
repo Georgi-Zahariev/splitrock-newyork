@@ -48,14 +48,14 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen md:min-h-[105vh] flex items-center justify-center relative overflow-hidden
-                  pb-8 md:pb-16"
+        className="min-h-[110vh] md:min-h-[115vh] flex justify-center relative overflow-hidden
+                  pt-32 md:pt-40 pb-8 md:pb-16"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 to-green-50/30"></div>
 
         <div className="relative z-10 text-center px-6 md:px-8 max-w-6xl mx-auto">
           <div>
-            <h1 className="mt-0 text-2xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-2 md:mb-6 tracking-tight">
+            <h1 className="mt-16 md:mt-32 text-2xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-2 md:mb-6 tracking-tight">
               SplitRock
             </h1>
 
@@ -64,8 +64,37 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Spacer for breathing room */}
-          <div className="h-2 md:h-12 lg:h-16"></div>
+          {/* Spacer before motto */}
+          <div className="h-6 md:h-12"></div>
+
+          {/* Motto Section */}
+          <div className="px-4 md:px-12">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-blue-500 to-emerald-400 rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-700"></div>
+              <div className="relative bg-gradient-to-br from-white/90 to-white/60 backdrop-blur-xl rounded-3xl px-8 py-12 md:px-12 md:py-16 border border-white/40 shadow-2xl">
+                <div className="flex flex-col items-center">
+                  <p className="text-base md:text-2xl lg:text-3xl font-light italic text-gray-800 leading-relaxed text-center max-w-5xl">
+                    &ldquo;To be not only the{' '}
+                    <span className="font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                      most reliable, creative, and excellent-performing
+                    </span>
+                    {' '}landscape and construction company, but also a{' '}
+                    <span className="font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                      friendly face
+                    </span>
+                    —a company that persistently fosters a{' '}
+                    <span className="font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                      caring and engaging community
+                    </span>
+                    &rdquo;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Spacer after motto */}
+          <div className="h-12 md:h-20"></div>
 
           {/* Service Cards in Hero */}
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -133,9 +162,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Spacer after service cards */}
+          <div className="h-12 md:h-20"></div>
         </div>
       </section>
-
 
       {/* Landscaping Section */}
       <section id="landscaping" className="min-h-screen py-20 bg-white flex items-center justify-center">
@@ -228,10 +259,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Spacer after service cards */}
+          <div className="h-12 md:h-20"></div>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Landscaping Section */}
       <section id="contact" className="py-24 bg-gray-900 text-white flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-10 w-full">
           {/* Spacer for breathing room */}
