@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { navItems, companyInfo } from '@/lib/data';
+import { navItems } from '@/lib/data';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

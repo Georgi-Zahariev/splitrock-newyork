@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import ContactPeople from '../components/ContactPeople';
@@ -177,7 +176,7 @@ export default function Home() {
             </h2>
             <div className="flex justify-center">
               <p className="text-xl text-gray-600 max-w-3xl leading-relaxed text-center">
-                We create beautiful, sustainable landscapes that enhance your property's value and your quality of life.
+                We create beautiful, sustainable landscapes that enhance your property&apos;s value and your quality of life.
               </p>
             </div>
           </div>
@@ -276,7 +275,7 @@ export default function Home() {
             </h2>
             <div className="flex justify-center mb-12">
               <p className="text-xl text-gray-300 max-w-4xl leading-relaxed text-center">
-                Contact us today for a free consultation and let's bring your outdoor vision to life.
+                Contact us today for a free consultation and let&apos;s bring your outdoor vision to life.
               </p>
             </div>
           </div>
