@@ -104,7 +104,7 @@ export default function Home() {
             >
               <div className="aspect-[5/4] overflow-hidden relative">
                 <img
-                  src="/images/landscaping.jpeg"
+                  src="/images/Landscaping.jpeg"
                   alt="Landscaping Services"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
                 />
@@ -203,7 +203,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <div className="rounded-3xl overflow-hidden shadow-2xl max-w-lg">
                   <img 
-                    src="/images/landscaping.jpeg" 
+                    src="/images/Landscaping.jpeg" 
                     alt="Landscaping Services" 
                     className="w-full h-full object-cover"
                   />
