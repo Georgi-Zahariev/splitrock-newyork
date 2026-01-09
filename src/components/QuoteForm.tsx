@@ -19,14 +19,23 @@ export default function QuoteForm({ isVisible, onClose }: QuoteFormProps) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
+  const [serviceError, setServiceError] = useState('');
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage('');
+    setServiceError('');
+
+    // Validate that at least one service is selected
+    if (!formData.landscaping && !formData.outdoorConstruction) {
+      setServiceError('Please select at least one service');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
-      const response = await fetch('/api/save-quote', {
+      const response = await fetch('/api/quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,17 +45,15 @@ export default function QuoteForm({ isVisible, onClose }: QuoteFormProps) {
           email: formData.email,
           phone: formData.phone,
           address: formData.address,
-          services: {
-            landscaping: formData.landscaping,
-            outdoorConstruction: formData.outdoorConstruction,
-          },
+          landscaping: formData.landscaping,
+          outdoorConstruction: formData.outdoorConstruction,
           details: formData.details,
         }),
       });
 
       const result = await response.json();
 
-      if (result.success) {
+      if (result.ok) {
         setSubmitMessage('✓ Quote request submitted successfully! We will contact you soon.');
         // Reset form
         setFormData({
@@ -64,7 +71,17 @@ export default function QuoteForm({ isVisible, onClose }: QuoteFormProps) {
           setSubmitMessage('');
         }, 2000);
       } else {
-        setSubmitMessage('✗ Failed to submit request. Please try again.');
+        // Handle specific error types
+        if (result.error === 'validation' && result.fieldErrors) {
+          const errorMessages = Object.entries(result.fieldErrors)
+            .map(([field, errors]) => `${field}: ${(errors as string[]).join(', ')}`)
+            .join('\n');
+          setSubmitMessage(`✗ Validation error:\n${errorMessages}`);
+        } else if (result.error === 'rate_limited') {
+          setSubmitMessage(`✗ Too many requests. Please try again in ${result.retryAfterSeconds} seconds.`);
+        } else {
+          setSubmitMessage('✗ Failed to submit request. Please try again.');
+        }
       }
     } catch (error) {
       setSubmitMessage('✗ An error occurred. Please try again.');
@@ -152,12 +169,20 @@ export default function QuoteForm({ isVisible, onClose }: QuoteFormProps) {
               {/* Service Selection Section */}
               <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
                 <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-8 pb-4 border-b border-gray-200">Service Type *</h4>
+                {serviceError && (
+                  <div className="mb-5 px-5 py-3 bg-red-100 text-red-800 border border-red-300 rounded-lg text-sm font-semibold">
+                    ⚠️ {serviceError}
+                  </div>
+                )}
                 <div className="space-y-5">
                   <label className="flex items-start p-5 bg-white rounded-lg hover:bg-gray-100 cursor-pointer transition-all border border-gray-200 hover:border-gray-400">
                     <input 
                       type="checkbox" 
                       checked={formData.landscaping}
-                      onChange={(e) => setFormData({...formData, landscaping: e.target.checked})}
+                      onChange={(e) => {
+                        setFormData({...formData, landscaping: e.target.checked});
+                        setServiceError(''); // Clear error when user makes a selection
+                      }}
                       className="mr-5 mt-1 h-5 w-5 text-emerald-600 rounded border-gray-300 focus:ring-2 focus:ring-emerald-500" 
                     />
                     <div>
@@ -169,7 +194,10 @@ export default function QuoteForm({ isVisible, onClose }: QuoteFormProps) {
                     <input 
                       type="checkbox" 
                       checked={formData.outdoorConstruction}
-                      onChange={(e) => setFormData({...formData, outdoorConstruction: e.target.checked})}
+                      onChange={(e) => {
+                        setFormData({...formData, outdoorConstruction: e.target.checked});
+                        setServiceError(''); // Clear error when user makes a selection
+                      }}
                       className="mr-5 mt-1 h-5 w-5 text-amber-600 rounded border-gray-300 focus:ring-2 focus:ring-amber-500" 
                     />
                     <div>
