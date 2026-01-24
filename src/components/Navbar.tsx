@@ -71,7 +71,7 @@ const Navbar = () => {
       >
         {/* Clean Navbar Container */}
         <div className="max-w-full mx-auto">
-          <div className="flex items-center px-4 py-3 md:px-16 md:py-6">
+          <div className="flex items-center justify-between px-4 py-3 md:px-16 md:py-6 relative">
             
             {/* Simple Logo Section - Fixed Width with Right Margin */}
             <div className="flex items-center md:w-80">
@@ -93,8 +93,8 @@ const Navbar = () => {
             </div>
 
             {/* Centered Navigation Components */}
-            <div className="hidden lg:flex items-center justify-center flex-1 px-4">
-              <div className="flex items-center space-x-4 justify-center">
+            <div className="hidden lg:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+              <div className="flex items-center space-x-4">
                 {navItems.map((item) => (
                   <button
                     key={item.href}

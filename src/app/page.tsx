@@ -54,8 +54,11 @@ export default function Home() {
 
         <div className="relative z-10 text-center px-8 md:px-8 max-w-6xl mx-auto">
           <div>
-            <h1 className="mt-16 md:mt-32 text-2xl md:text-7xl lg:text-8xl font-black text-gray-900 mb-2 md:mb-6 tracking-tight">
-              SplitRock
+            <h1 className="md:text-7xl lg:text-8xl font-black text-gray-900 mb-2">
+              SPLITROCK
+            </h1>
+            <h1 className="mt-16 md:mt-32 text-1xl md:text-3xl lg:text-6xl font-black text-gray-600 mb-2 md:mb-6 tracking-tight">
+              TERRAIN
             </h1>
 
             <p className="text-sm md:text-3xl text-gray-700 font-light leading-relaxed px-2 md:px-4">
@@ -69,20 +72,20 @@ export default function Home() {
           {/* Motto Section */}
           <div className="px-4 md:px-12">
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-blue-500 to-emerald-400 rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#CC5500] via-[#8B4513] to-[#CC5500] rounded-3xl opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-700"></div>
               <div className="relative bg-gradient-to-br from-white/90 to-white/60 backdrop-blur-xl rounded-3xl px-8 py-12 md:px-12 md:py-16 border border-white/40 shadow-2xl">
                 <div className="flex flex-col items-center">
                   <p className="text-base md:text-2xl lg:text-3xl font-light italic text-gray-800 leading-relaxed text-center max-w-5xl">
                     &ldquo;To be not only the{' '}
-                    <span className="font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-r from-[#CC5500] via-[#8B4513] to-[#252525] bg-clip-text text-transparent">
                       most reliable, creative, and excellent-performing
                     </span>
                     {' '}landscape and construction company, but also a{' '}
-                    <span className="font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-r from-[#252525] via-[#8B4513] to-[#CC5500] bg-clip-text text-transparent">
                       friendly face
                     </span>
                     —a company that persistently fosters a{' '}
-                    <span className="font-bold bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                    <span className="font-bold bg-gradient-to-r from-[#CC5500] via-[#8B4513] to-[#252525] bg-clip-text text-transparent">
                       caring and engaging community
                     </span>
                     &rdquo;
