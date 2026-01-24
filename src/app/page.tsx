@@ -268,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* Landscaping Section */}
-      <section id="contact" className="py-24 bg-gray-900 text-white flex items-center justify-center">
+      <section id="contact" className="py-24 bg-black text-white flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-10 w-full">
           {/* Spacer for breathing room */}
           <div className="h-2 md:h-12 lg:h-16"></div>
